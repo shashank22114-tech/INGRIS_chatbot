@@ -1,0 +1,238 @@
+/* Base */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #7b2cbf, #d90429);
+  color: #fff;
+}
+
+/* Reusable page header used on map and chat pages */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #5a0c0c;
+  color: #fff;
+  padding: 12px 18px;
+  position: relative;
+}
+
+/* Logo in header */
+.logo {
+  height: 56px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* header title */
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* Back button */
+.back-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* HOME */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.home-content { max-width: 640px; padding: 20px; }
+.home-content h1 { font-size: 2.5em; margin-bottom: 12px; }
+.home-content p { font-size: 1.1em; margin-bottom: 20px; }
+#map-btn, #chat-btn {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4d6d;
+  color: white;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+#map-btn:hover, #chat-btn:hover { background-color: #e5383b; }
+
+/* MAP PAGE */
+.map-container { height: 100vh; display: flex; flex-direction: column; }
+.map-box { flex: 1; }
+
+/* MAIN LAYOUT (chat page) */
+.main-container {
+  display: flex;
+  height: calc(100vh - 72px); /* header height approx */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #9d0208;
+  color: white;
+  padding: 15px;
+  overflow-y: auto;
+  border-right: 2px solid rgba(255,255,255,0.12);
+}
+#new-chat-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #d00000;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+#new-chat-btn:hover { background: #ff0a54; }
+.sidebar h2 { font-size: 16px; margin: 6px 0; text-align: center; }
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li {
+  background: #ba181b;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Chat container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background: #fff;
+  color: #222;
+}
+
+/* CHAT WINDOW: uses chat_bg.jpg (transparent bubbles will show it) */
+.chat-window {
+  flex: 1;
+  padding: 18px;
+  border-radius: 10px;
+  background: url("chat_bg.jpg") no-repeat center center;
+  background-size: cover;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* INPUTS */
+.input-area, .pdf-area { display: flex; gap: 8px; margin-top: 8px; align-items:center; }
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #9d0208;
+  outline: none;
+}
+#send-btn, #upload-btn, .file-btn {
+  padding: 10px 16px;
+  border: none;
+  background: #9d0208;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#send-btn:hover, #upload-btn:hover, .file-btn:hover { background: #e5383b; }
+
+/* Hide default file input but keep label as visible button */
+#pdf-upload { display: none; }
+
+/* CHAT BUBBLES */
+.message {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 72%;
+  word-wrap: break-word;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  clear: both;
+}
+.message:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.14); }
+
+/* User on right — semi-transparent red so background shows */
+.user-message {
+  background: rgba(255, 77, 109, 0.85);
+  color: #fff;
+  float: right;
+  border-bottom-right-radius: 6px;
+  text-align: right;
+}
+
+/* Bot on left — semi-transparent maroon/purple */
+.bot-message {
+  background: rgba(181, 23, 158, 0.85);
+  color: #fff;
+  float: left;
+  border-bottom-left-radius: 6px;
+  text-align: left;
+}
+
+/* HEADER: use explicit relative paths (root folder) */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #5a0c0c;   /* fallback color if image missing */
+  color: #fff;
+  padding: 12px 18px;
+  position: relative;
+  /* Optional banner behind header text (uncomment if you want header background image) */
+  /* background-image: url("./hhh.jpg"); 
+     background-repeat: no-repeat;
+     background-position: left center;
+     background-size: 80px 80px; */
+}
+
+/* LOGO IMAGE (img tag uses src="hhh.jpg") */
+.logo {
+  height: 56px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  /* If you want to show the logo using CSS background (instead of <img>), use:
+     background-image: url("./hhh.jpg");
+     background-size: contain;
+     background-repeat: no-repeat;
+     width: 80px; height: 56px; display:inline-block;
+  */
+}
+
+/* CHAT WINDOW background image — explicit relative path */
+.chat-window {
+  flex: 1;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #fceaea; /* fallback */
+  /* explicit path to chat background image in project root */
+  background-image: url("./chat_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* cover keeps it filling the box */
+  overflow-y: auto;
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+
+/* Utility */
+.hidden { display: none; }

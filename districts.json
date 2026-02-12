@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "Adilabad",
+        "status": "Safe",
+        "desc": "Demo polygon — sample status: Safe"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [78.45, 19.60],
+            [78.65, 19.60],
+            [78.65, 19.80],
+            [78.45, 19.80],
+            [78.45, 19.60]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "Nirmal",
+        "status": "Critical",
+        "desc": "Demo polygon — sample status: Critical"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [78.20, 19.00],
+            [78.45, 19.00],
+            [78.45, 19.30],
+            [78.20, 19.30],
+            [78.20, 19.00]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "Rangareddy",
+        "status": "Semi-Critical",
+        "desc": "Demo polygon — sample status: Semi-Critical"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [78.20, 17.80],
+            [78.70, 17.80],
+            [78.70, 18.10],
+            [78.20, 18.10],
+            [78.20, 17.80]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "Hyderabad",
+        "status": "Over-Exploited",
+        "desc": "Demo polygon — sample status: Over-Exploited"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [78.30, 17.30],
+            [78.70, 17.30],
+            [78.70, 17.60],
+            [78.30, 17.60],
+            [78.30, 17.30]
+          ]
+        ]
+      }
+    }
+  ]
+}

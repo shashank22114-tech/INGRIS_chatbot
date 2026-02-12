@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>INGRES Chatbot Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet for maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <!-- Home Page -->
+  <div class="home-container" id="home">
+    <div class="home-content">
+      <h1>Welcome to the INGRES Groundwater Assistant</h1>
+      <p>Select an option to continue:</p>
+      <button id="map-btn">🗺 View Groundwater Geo Visualization</button>
+      <button id="chat-btn">💬 Start Chatbot</button>
+    </div>
+  </div>
+
+  <!-- Geo Visualization Page -->
+  <div class="map-container hidden" id="map-page">
+    <header class="page-header">
+      <img src="hhh.png" alt="Logo" class="logo" />
+      <h1>Groundwater Status Map (Demo)</h1>
+      <button id="back-home-1" class="back-btn">⬅ Back</button>
+    </header>
+    <div id="map" class="map-box"></div>
+  </div>
+
+  <!-- Chatbot Page -->
+  <div class="app-container hidden" id="chat-app">
+    <header class="page-header">
+      <img src="hhh.png" alt="Logo" class="logo" />
+      <h1>INGRES Chatbot Prototype</h1>
+      <button id="back-home-2" class="back-btn">⬅ Back</button>
+    </header>
+
+    <div class="main-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <button id="new-chat-btn">+ New Chat</button>
+        <h2>Previous Chats</h2>
+        <ul id="chat-sessions"></ul>
+      </div>
+
+      <!-- Chat area -->
+      <div class="chat-container">
+        <!-- Chat window with background -->
+        <div id="chat-window" class="chat-window" role="log" aria-live="polite"
+          style="background: url('chat_bg.png') no-repeat center center; background-size: cover;">
+        </div>
+
+        <div class="input-area">
+          <input type="text" id="user-input" placeholder="Type your message..." />
+          <button id="send-btn">Send</button>
+        </div>
+
+        <div class="pdf-area">
+          <label class="file-btn" for="pdf-upload">Choose PDF</label>
+          <input type="file" id="pdf-upload" accept=".pdf" />
+          <button id="upload-btn">Upload PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
